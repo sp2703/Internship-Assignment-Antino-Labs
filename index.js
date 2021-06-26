@@ -11,7 +11,7 @@ app.use(express.json());
 app.use('/api/register', User);
 app.use('/api/auth', Auth);
 app.use('/product', Product);
-mongoose.connect('mongodb://localhost/assignment')
+mongoose.connect(process.env.DB)
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.log(err))
 
